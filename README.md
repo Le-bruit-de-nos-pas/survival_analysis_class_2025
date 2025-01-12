@@ -106,7 +106,9 @@ where:
 To estimate $\boldsymbol{\beta}$, Cox proposed the partial likelihood:
 
 $$
+
 L(\boldsymbol{\beta}) = \prod_{i=1}^k \frac{\exp(\mathbf{x}_i^T \boldsymbol{\beta})}{\sum_{j \in R(t_i)} \exp(\mathbf{x}_j^T \boldsymbol{\beta})},
+
 $$
 
 where $R(t_i)$ is the risk set at time $t_i$.
