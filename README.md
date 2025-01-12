@@ -106,9 +106,7 @@ where:
 To estimate $\boldsymbol{\beta}$, Cox proposed the partial likelihood:
 
 $$
-
 L(\boldsymbol{\beta}) = \prod_{i=1}^k \frac{\exp(\mathbf{x}_i^T \boldsymbol{\beta})}{\sum_{j \in R(t_i)} \exp(\mathbf{x}_j^T \boldsymbol{\beta})},
-
 $$
 
 where $R(t_i)$ is the risk set at time $t_i$.
@@ -233,6 +231,56 @@ $$
 ### 6.3 Joint Models
 
 Joint models simultaneously analyze survival data and longitudinal data (e.g., repeated biomarker measurements) to assess their interplay.
+
+### 6.4 Multiple Imputation for Censored Data
+
+Survival datasets often include missing or censored data. Multiple imputation can address these issues:
+
+- Methods include predictive mean matching or Bayesian approaches.
+- Adjust survival estimates using imputed datasets and Rubin’s rules for combining results.
+
+### 6.5 Cure Models
+
+Cure models account for scenarios where a fraction of subjects may never experience the event:
+
+- Mixture cure models: Separate populations into “cured” and “susceptible.”
+- Non-mixture models: Directly model the survival curve with asymptotic behavior reflecting cure.
+
+### 6.6 Interval Censoring
+
+Interval censoring occurs when exact event times are unknown but lie within an interval:
+
+- Interval censoring likelihoods and extensions of Kaplan-Meier estimation.
+- Methods like the Turnbull estimator for nonparametric inference.
+
+### 6.7 Model Diagnostics and Goodness-of-Fit
+
+Diagnostic techniques for survival models:
+
+- Residual analyses (e.g., Martingale, Deviance, and Schoenfeld residuals).
+- Visual checks using Cox-Snell residual plots.
+- Likelihood ratio tests, AIC/BIC for model comparison.
+
+### 6.8 Accelerated Failure Time Models
+
+The Accelerated Failure Time (AFT) model is a parametric alternative to Cox regression:
+
+$$
+T = \exp(\mathbf{x}^T \boldsymbol{\beta} + \epsilon),
+$$
+
+where $\epsilon$ is a random error term. The interpretation of $\boldsymbol{\beta}$ relates to time acceleration or deceleration factors.
+
+### 6.9 Simulation Studies in Survival Analysis
+
+- Generating synthetic survival data under various distributions (e.g., Weibull, Log-normal).
+- Techniques for assessing power, bias, and variability in survival studies.
+
+### 6.10 Bayesian Survival Analysis
+
+- Use of Bayesian priors for survival modeling, particularly for small or sparse datasets.
+- Markov Chain Monte Carlo (MCMC) techniques for posterior estimation.
+- Application to parametric, semi-parametric, and competing risks models.
 
 ---
 
