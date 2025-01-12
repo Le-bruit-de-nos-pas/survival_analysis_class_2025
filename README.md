@@ -110,6 +110,7 @@ L(\boldsymbol{\beta}) = \prod_{i=1}^k \frac{\exp(\mathbf{x}_i^T \boldsymbol{\bet
 $$
 
 
+
 where $R(t_i)$ is the risk set at time $t_i$.
 
 The log-partial likelihood is maximized to obtain estimates of $\boldsymbol{\beta}$.
